@@ -171,12 +171,16 @@ function clearErrorMessages() {
       element.textContent = "";
   });
 }
-const picker = document.getElementById('datePicker','additionalDate');
-picker.addEventListener('input', function(e){
-  const day = new Date(this.value).getUTCDay();
-  if([6,0].includes(day)){
-    e.preventDefault();
-    this.value = '';
-    alert('Weekends not allowed');
-  }
+const picker = document.querySelectorAll('#datePicker, #additionalDate');
+
+picker.forEach(input => {
+    input.addEventListener('input', function(e){
+        const day = new Date(this.value).getUTCDay();
+        if([6,0].includes(day)){
+            e.preventDefault();
+            this.value = '';
+            alert('Weekends not allowed');
+        }
+    });
 });
+
