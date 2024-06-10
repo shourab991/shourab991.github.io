@@ -7,14 +7,13 @@ const today = new Date();
     const formattedDate = `${year}-${month}-${day}`;
     
     // Set the value of the input fields to today's date
-    document.getElementById("fromDate").value = formattedDate;
-    document.getElementById("toDate").value = formattedDate;
+    document.getElementById("dateInput").value = formattedDate;
     
 
 const apiKey = 'py0oHgf3bcN3Q1OMgpUaqORS7SD3koDs';
 
-async function fetchStockData(ticker, from, to) {
-    const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${from}/${to}?adjusted=true&apiKey=${apiKey}`;
+async function fetchStockData(ticker, date) {
+    const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${date}/${date}?adjusted=true&apiKey=${apiKey}`;
 
     try {
         const response = await fetch(url);
@@ -47,15 +46,14 @@ async function displayStockData() {
     document.getElementById('errorMessage').textContent = '';
 
     const ticker = document.getElementById('searchBox').value.toUpperCase();
-    const fromDate = document.getElementById('fromDate').value;
-    const toDate = document.getElementById('toDate').value;
+    const date = document.getElementById('dateInput').value;
 
     if (!ticker) {
         displayError('Please enter a ticker symbol.');
         return;
     }
 
-    const stockData = await fetchStockData(ticker, fromDate, toDate);
+    const stockData = await fetchStockData(ticker, date);
 
     if (stockData && stockData.results) {
         const results = stockData.results;
@@ -82,18 +80,19 @@ async function displayStockData() {
     }
 }
 
-const picker = document.getElementById('fromDate', 'toDate');
-picker.addEventListener('input', function(e){
-  const day = new Date(this.value).getUTCDay();
-  if([6,0].includes(day)){
-    e.preventDefault();
-    this.value = '';
-    alert('Weekends not allowed');
-  }
-});
+
 
 function handleKeyPress(event) {
     if (event.key === 'Enter') {
         displayStockData();
     }
 }
+const dateInput = document.getElementById('dateInput');
+dateInput.addEventListener('input', function(e){
+    const day = new Date(this.value).getUTCDay();
+    if([6, 0].includes(day)){
+        e.preventDefault();
+        this.value = '';
+        alert('Weekends not allowed');
+    }
+});
