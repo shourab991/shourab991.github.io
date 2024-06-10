@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Details</title>
+    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Detail</h1>
+        <div class="search-bar">
+            <input type="text" id="ticker-input" placeholder="Enter stock ticker (e.g., AAPL)">
+            <button onclick="fetchTickerDetails()">Search</button>
+        </div>
+        <div id="stock-details"></div>
+        <div class="back-to-homepage">
+            <a href="index.html">Back to Homepage</a>
+        </div>
+    </div>
+    <div id="toast"></div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="detail.js"></script>
+</body>
+</html>

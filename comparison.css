@@ -1,0 +1,170 @@
+
+body, h1, h2, p, label, input, button {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Header styling */
+.headerCompare {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f8f3f3;
+  background-color: #541616;
+  font-size: 20px;
+}
+
+/* Search area styling */
+#searchArea input[type="text"] {
+  width: calc(50% - 20px); /* Adjust the width of the search boxes */
+  padding: 10px; /* Adjust the padding of the search boxes */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button.compareButton {
+  width: 60%; /* Adjust the width of the compare button */
+  padding: 10px; /* Adjust the padding of the compare button */
+  margin-top: 10px;
+  background-color: #259a35;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.compareButton:hover {
+  background-color: #212a22;
+}
+
+/* Stock container styling */
+.stock-container {
+  float: left; /* Float the containers to make them appear side by side */
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Add margin to create space between the search area and stock containers */
+}
+/* Clear the float after the containers to prevent layout issues */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+  padding-left: 50px;
+}
+
+/* Stock info styling */
+.stock-container h2 {
+  margin-bottom: 10px;
+}
+
+.stock-container p {
+  margin-bottom: 5px;
+}
+
+/* Image styling */
+.stock-container img {
+  display: block;
+  margin: 0 auto 10px; /* Center the image */
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+.container {
+  max-width: 800px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+@media (max-width: 767px) {
+  /* Add your styles for smaller screens here */
+  body {
+      font-size: 14px;
+  }
+  .container {
+      width: 90%;
+      margin: 0 auto;
+  }
+}
+
+/* CSS for screens between 768 and 1024 pixels (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Add your styles for medium-sized screens here */
+  .container {
+      width: 80%;
+      margin: 0 auto;
+  }
+}
+
+/* CSS for screens larger than 1024 pixels (e.g., desktops) */
+@media (min-width: 1025px) {
+  /* Add your styles for larger screens here */
+  .container {
+      width: 1200px;
+      margin: 0 auto;
+  }
+}
+#datetime {
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:rgb(76, 15, 15);
+  display: flex;
+  justify-content: left;
+}
+#additionalStockSymbol {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Style for the add stock button */
+#addStockButton {
+  padding: 8px 16px;
+  background-color: #4e3482;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for the add stock button */
+#addStockButton:hover {
+  background-color: #45a049;
+}
+#backToHomepageButton {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background-color: #b62e24;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#backToHomepageButton:hover {
+  background-color: #d32f2f;
+}

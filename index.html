@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Stock Zero</title>
+</head>
+<body>
+<header>STOCK ZERO</header>
+<main>
+    <div id="searchArea">
+        <label for="searchBox">Enter Ticker Symbol</label>
+        <input autocomplete="off" onkeypress="handleKeyPress(event)" type="text" placeholder="AAPL" id="searchBox" />
+        <span id="errorMessage" class="error-message"></span>
+        <label for="fromDate">From Date</label>
+<input type="date" id="fromDate">
+<label for="toDate">To Date</label>
+<input type="date" id="toDate">
+<button class="searchButton" onclick="displayStockData()">Get Data</button>
+    </div>
+
+    <div id="displayedStockResults">
+        <p id="loadingIndicator"></p>
+        <img id="stockImage" src="Images/Stock Market.png" alt="Image not found">
+        <p id="stockName"></p>
+        <p id="closingPrice">Closing Price: </p>
+        <p id="highPrice">High Price: </p>
+        <p id="lowPrice">Low Price: </p>
+        <p id="openingPrice">Opening Price: </p>
+        <p id="timestamp">Timestamp: </p>
+        <p id="volume">Volume: </p>
+        <p id="volumeWeightedAverage">Volume Weighted Average: </p>
+    </div>
+
+    <div>
+        <div id="subpage-links">
+            <a href="comparison.html" class="subpage-link">Stock Comparison</a>
+            <a href="Detail.html" class="subpage-link">Stock Detail</a>
+        </div>
+        <div id="personalInformation">
+            <p>Made By Shourab Chowdhury</p>
+            <a href="https://www.linkedin.com/in/shourabchowdhury" id="linkedInLink" target="_blank">LinkedIn</a>
+        </div>
+        <p></p>
+        <div id="datetime"></div>
+    </div>
+</main>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="Home.js"></script>
+<script src="HomeArray.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Comparison</title>
+    <link rel="stylesheet" href="comparison.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="headerCompare">STOCK COMPARISON</h1>
+    <a href="index.html">
+      <button id="backToHomepageButton">Back to Homepage</button>
+  </a>
+    
+    <main>
+      <div id="searchArea">
+        <label for="searchBox1">Enter Ticker Symbol 1:</label>
+        <input onkeypress="handleKeyPress(event)" type="text" placeholder="AAPL" id="searchBox1">
+        <span id="errorSearchBox1" class="error-text"></span>
+    
+        <label for="searchBox2">Enter Ticker Symbol 2:</label>
+        <input onkeypress="handleKeyPress(event)" type="text" placeholder="GOOG" id="searchBox2">
+        <span id="errorSearchBox2" class="error-text"></span>
+    
+        <label for="datePicker">Enter Date:</label>
+        <input type="date" id="datePicker">
+        <span id="errorDatePicker" class="error-text"></span>
+    
+        <button class="compareButton" onclick="compareStocks('searchBox1','searchBox2')">Compare</button>
+    </div>
+    <div id="additionalStockInput" style="display: none;">
+        <input type="text" placeholder="Stock Symbol" id="additionalStockSymbol">
+        <span id="errorAdditionalStockSymbol" class="error-text"></span>
+    
+        <input type="date" id="additionalDate">
+        <span id="errorAdditionalDate" class="error-text"></span>
+    
+        <button id="addStockButton" onclick="addStockInput()">Add Stock</button>
+    </div>
+    </div>
+    <div class="stock-container" id="comparisonResults1"></div>
+    <div class="stock-container" id="comparisonResults2"></div>
+    <div id="toast" class="toast"></div>
+  </div>
+  </main>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="array.js"></script>
+  <script src="comparison.js"></script>
+</body>
+</html>

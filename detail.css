@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff; /* White color */
+  background-color: #800000; /* Maroon background */
+  padding: 10px; /* Add padding for better visibility */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  font-size: 24px; /* Adjust the font size */
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.search-bar button:hover {
+  background-color: #45a049; /* Darker green color on hover */
+}
+
+#stock-details {
+  margin-top: 20px;
+}
+
+.detail-item {
+  margin-bottom: 10px;
+  background-color: #f0fff0; /* Light green background */
+  padding: 10px;
+  border: 1px solid #d4edda; /* Light green border */
+  border-radius: 5px;
+}
+
+.detail-item span {
+  display: block;
+  color: #2c7a2c; /* Green color */
+}
+
+.detail-item span:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.address, .description {
+  font-style: italic;
+}
+
+.back-to-homepage {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-to-homepage a {
+  color: #ffffff; /* White color for the text */
+  background-color: #8b0000; /* Dark red background */
+  padding: 10px 20px; /* Add padding for better appearance */
+  border-radius: 4px; /* Add border-radius for rounded corners */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.back-to-homepage a:hover {
+  background-color: #a52a2a; /* Darker red color on hover */
+}
+
+.loading {
+  text-align: center;
+  color: #888; /* Gray color */
+}
+
+#toast {
+  visibility: hidden;
+  position: fixed;
+  top: 20px; /* Adjust the top position */
+  right: 20px;
+  transform: translateX(-50%);
+  background-color: #333333;
+  color: #46cd73;
+  text-align: center;
+  padding: 16px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+#toast.show {
+  visibility: visible;
+}
