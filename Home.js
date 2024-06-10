@@ -1,14 +1,20 @@
 const today = new Date();
-    
-    // Format the date as YYYY-MM-DD
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const day = String(today.getDate()).padStart(2, '0');
-    const formattedDate = `${year}-${month}-${day}`;
-    
-    // Set the value of the input fields to today's date
-    document.getElementById("dateInput").value = formattedDate;
-    
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, '0');
+const day = String(today.getDate()).padStart(2, '0');
+const formattedDate = `${year}-${month}-${day}`;
+
+// Set the maximum date for dateInput to yesterday's date
+const maxDate = new Date(today);
+maxDate.setDate(today.getDate() - 1);
+const maxYear = maxDate.getFullYear();
+const maxMonth = String(maxDate.getMonth() + 1).padStart(2, '0');
+const maxDay = String(maxDate.getDate()).padStart(2, '0');
+const maxFormattedDate = `${maxYear}-${maxMonth}-${maxDay}`;
+
+document.getElementById("dateInput").value = formattedDate;
+document.getElementById("dateInput").setAttribute('max', maxFormattedDate);
+
 
 const apiKey = 'py0oHgf3bcN3Q1OMgpUaqORS7SD3koDs';
 
