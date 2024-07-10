@@ -293,3 +293,24 @@ dateInput.addEventListener('input', function(e){
         alert('Weekends not allowed');
     }
 });
+
+function updateDateTime() {
+    const now = new Date();
+    const options = {
+        timeZone: 'America/St_Johns',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true 
+    };
+    const dateTimeString = now.toLocaleString('en-US', options);
+    document.getElementById('dateTime').textContent = `Newfoundland Time: ${dateTimeString}`;
+}
+
+updateDateTime();
+
+setInterval(updateDateTime, 1000);
+

@@ -206,3 +206,19 @@ button.compareButton:hover {
   margin-top: -5px; /* Half of height */
   margin-left: -5px; /* Half of width */
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  font-size: 12px;
+  color: #333;
+}

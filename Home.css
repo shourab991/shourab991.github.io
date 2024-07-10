@@ -270,6 +270,23 @@ main {
   color: #333; /* Change text color */
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  font-size: 12px;
+  color: #333;
+}
+
+
 @media (max-width: 767px) {
   /* Add your styles for smaller screens here */
   body {
