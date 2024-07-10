@@ -27,7 +27,7 @@ input, textarea {
 }
 
 .suggestion__item {
-  font-size: 16px; /* Adjust font size */
+  font-size: 16px; 
   background-color: #fff;
   padding: 5px;
 }
@@ -108,10 +108,9 @@ main {
 }
 
 #stockImage {
-  width: 80px; /* Set a fixed width */
-  height: 80px; /* Set a fixed height */
-  /* Adjust the values as needed */
-  object-fit: cover; /* Scale the image while preserving its aspect ratio */
+  width: 80px; 
+  height: 80px; 
+  object-fit: cover; 
 }
 
 .subpage-link {
@@ -143,7 +142,7 @@ main {
 #linkedInLink {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0077B5; /* LinkedIn color */
+  background-color: #0077B5; 
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -151,7 +150,7 @@ main {
 }
 
 #linkedInLink:hover {
-  background-color: #00548f; /* Darker shade on hover */
+  background-color: #00548f; 
 }
 
 #datetime {
@@ -163,7 +162,7 @@ main {
 }
 
 @media (max-width: 767px) {
-  /* Add your styles for smaller screens here */
+
   body {
     font-size: 14px;
   }
@@ -173,16 +172,13 @@ main {
   }
 }
 
-/* CSS for screens between 768 and 1024 pixels (e.g., tablets) */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Add your styles for medium-sized screens here */
   .container {
     width: 80%;
     margin: 0 auto;
   }
 }
 
-/* CSS for screens larger than 1024 pixels (e.g., desktops) */
 @media (min-width: 1025px) {
   /* Add your styles for larger screens here */
   .container {
@@ -193,15 +189,14 @@ main {
 
 #comparisonResults1, #comparisonResults2 {
   display: inline-block;
-  /* Display the containers side by side */
-  margin-right: 20px; /* Add some spacing between the containers */
+  margin-right: 20px; 
   margin-left: 300px;
 }
 
 .stock-info1 img,
 .stock-info2 img {
-  width: 100px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 100px;
+  height: auto; 
 }
 
 #searchBox {
@@ -210,12 +205,12 @@ main {
   border-radius: 5px;
   font-size: 16px;
   width: 300px;
-  margin: 0 auto; /* Center the search bar horizontally */
+  margin: 0 auto; 
   display: block;
   margin-bottom: 10px;
 }
 
-/* Style for autocomplete suggestions */
+
 #autocompleteSuggestions {
   position: absolute;
   background-color: #fff;
@@ -225,10 +220,10 @@ main {
   max-height: 200px;
   overflow-y: auto;
   z-index: 1;
-  width: 300px; /* Match the width of the search bar */
-  margin: 0 auto; /* Center the autocomplete suggestions horizontally */
-  left: 0; /* Reset left positioning */
-  right: 0; /* Reset right positioning */
+  width: 300px; 
+  margin: 0 auto; 
+  left: 0; 
+  right: 0; 
 }
 
 #autocompleteSuggestions div {
@@ -240,7 +235,6 @@ main {
   background-color: #f2f2f2;
 }
 
-/* Add this CSS for styling the displayed stock results */
 #displayedStockResults {
   border: 1px solid #ccc;
   padding: 20px;
@@ -253,8 +247,8 @@ main {
 #stockImage {
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* Make the image circular */
-  margin: 0 auto 20px; /* Center the image horizontally and add some bottom margin */
+  border-radius: 50%; 
+  margin: 0 auto 20px; 
 }
 
 #closingPrice,
@@ -266,8 +260,8 @@ main {
 #volume,
 #volumeWeightedAverage {
   margin: 10px 0;
-  font-size: 18px; /* Adjust font size */
-  color: #333; /* Change text color */
+  font-size: 18px; 
+  color: #333; 
 }
 
 body {
@@ -288,7 +282,6 @@ body {
 
 
 @media (max-width: 767px) {
-  /* Add your styles for smaller screens here */
   body {
     font-size: 14px;
   }
@@ -298,21 +291,18 @@ body {
   }
 }
 
-/* CSS for screens between 768 and 1024 pixels (e.g., tablets) */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Add your styles for medium-sized screens here */
   .container {
     width: 80%;
     margin: 0 auto;
   }
 }
 
-/* CSS for screens larger than 1024 pixels (e.g., desktops) */
+
 @media (min-width: 1025px) {
-  /* Add your styles for larger screens here */
+  
   .container {
     width: 1200px;
     margin: 0 auto;
   }
 }
-/* End of added CSS for displayed stock results */
