@@ -21,9 +21,9 @@ class InputSuggest {
     }
 
     showSuggestions() {
-        const inputVal = this.inputElement.value.trim().toLowerCase(); // Trim and convert to lowercase
+        const inputVal = this.inputElement.value.trim().toLowerCase(); 
         if (inputVal === '') {
-            this.suggestionBox.style.display = 'none'; // Hide suggestion box if input is empty
+            this.suggestionBox.style.display = 'none';
             return;
         }
         
@@ -183,7 +183,7 @@ window.onload = function() {
         'WPM',    // Wheaton Precious Metals Corp.
         'AG',     // First Majestic Silver Corp.
         'AGI'     // Alamos Gold Inc.
-        // Add more as needed
+
     ]);
 };
 
@@ -194,7 +194,6 @@ const month = String(today.getMonth() + 1).padStart(2, '0');
 const day = String(today.getDate()).padStart(2, '0');
 const formattedDate = `${year}-${month}-${day}`;
 
-// Set the maximum date for dateInput to yesterday's date
 const maxDate = new Date(today);
 maxDate.setDate(today.getDate() - 1);
 const maxYear = maxDate.getFullYear();
@@ -229,8 +228,8 @@ function displayError(message) {
         text: message,
         duration: 3000,
         close: true,
-        gravity: "top", // top or bottom
-        position: "right", // left, center, or right
+        gravity: "top", 
+        position: "right", 
         backgroundColor: "green",
     }).showToast();
 
@@ -238,7 +237,7 @@ function displayError(message) {
 }
 
 async function displayStockData() {
-    // Clear the error message before starting a new search
+
     document.getElementById('errorMessage').textContent = '';
 
     const ticker = document.getElementById('searchbox').value.toUpperCase();
@@ -259,7 +258,7 @@ async function displayStockData() {
         if (stock && stock.imageUrl) {
             document.getElementById("stockImage").src = stock.imageUrl;
         } else {
-            document.getElementById("stockImage").src = 'default.png'; // Set default image
+            document.getElementById("stockImage").src = 'default.png'; 
         }
 
         document.getElementById('stockName').textContent = `${ticker}`;

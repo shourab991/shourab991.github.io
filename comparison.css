@@ -22,14 +22,14 @@ header {
   padding: 7px;
 }
 
-/* Search area styling */
+
 #searchArea input[type="text"] {
-  width: calc(50% - 20px); /* Adjust the width of the search boxes */
-  padding: 10px; /* Adjust the padding of the search boxes */
+  width: calc(50% - 20px);
+  padding: 10px; 
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box; /* Include padding and border in the width calculation */
+  box-sizing: border-box; 
 }
 
 label {
@@ -46,8 +46,8 @@ input[type="text"] {
 }
 
 button.compareButton {
-  width: 60%; /* Adjust the width of the compare button */
-  padding: 10px; /* Adjust the padding of the compare button */
+  width: 60%; 
+  padding: 10px; 
   margin-top: 10px;
   background-color: #259a35;
   color: #fff;
@@ -61,15 +61,15 @@ button.compareButton:hover {
   background-color: #212a22;
 }
 
-/* Stock container styling */
+
 .stock-container {
-  float: left; /* Float the containers to make them appear side by side */
+  float: left; 
   margin-left: 100px;
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Add margin to create space between the search area and stock containers */
+  margin-top: 20px; 
 }
-/* Clear the float after the containers to prevent layout issues */
+
 .clearfix::after {
   content: "";
   display: table;
@@ -77,7 +77,6 @@ button.compareButton:hover {
   padding-left: 50px;
 }
 
-/* Stock info styling */
 .stock-container h2 {
   margin-bottom: 10px;
 }
@@ -86,20 +85,19 @@ button.compareButton:hover {
   margin-bottom: 5px;
 }
 
-/* Image styling */
 .stock-container img {
   display: block;
-  margin: 0 auto 10px; /* Center the image */
+  margin: 0 auto 10px; 
   width: 100px;
   height: auto;
   border-radius: 5px;
 }
 .container {
-  max-width: 800px; /* Set a maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 800px; 
+  margin: 0 auto; 
 }
 @media (max-width: 767px) {
-  /* Add your styles for smaller screens here */
+
   body {
       font-size: 14px;
   }
@@ -109,18 +107,17 @@ button.compareButton:hover {
   }
 }
 
-/* CSS for screens between 768 and 1024 pixels (e.g., tablets) */
+
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Add your styles for medium-sized screens here */
+  
   .container {
       width: 80%;
       margin: 0 auto;
   }
 }
 
-/* CSS for screens larger than 1024 pixels (e.g., desktops) */
 @media (min-width: 1025px) {
-  /* Add your styles for larger screens here */
+
   .container {
       width: 1200px;
       margin: 0 auto;
@@ -142,7 +139,6 @@ button.compareButton:hover {
   font-size: 16px;
 }
 
-/* Style for the add stock button */
 #addStockButton {
   padding: 8px 16px;
   background-color: #4e3482;
@@ -152,7 +148,6 @@ button.compareButton:hover {
   cursor: pointer;
 }
 
-/* Hover effect for the add stock button */
 #addStockButton:hover {
   background-color: #45a049;
 }
@@ -169,14 +164,12 @@ button.compareButton:hover {
 #backToHomepageButton:hover {
   background-color: #d32f2f;
 }
-/* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Style for the home button */
 .home-button {
   display: block;
   width: 30px;
@@ -191,7 +184,6 @@ button.compareButton:hover {
 
 
 
-/* Style to make it look like a home icon */
 .home-button::before {
   content: '';
   display: block;
@@ -203,8 +195,8 @@ button.compareButton:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -5px; /* Half of height */
-  margin-left: -5px; /* Half of width */
+  margin-top: -5px; 
+  margin-left: -5px; 
 }
 
 body {

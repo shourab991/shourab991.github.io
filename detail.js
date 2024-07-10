@@ -8,7 +8,7 @@ function displayTickerDetails(details) {
             detailItem.className = 'detail-item';
             
             const spanKey = document.createElement('span');
-            spanKey.innerText = `${capitalizeFirstLetter(key.replace(/_/g, ' '))}:`; // Capitalize first letter of key
+            spanKey.innerText = `${capitalizeFirstLetter(key.replace(/_/g, ' '))}:`; 
             detailItem.appendChild(spanKey);
   
             if (key === 'homepage_url' || key === 'icon_url' || key === 'logo_url') {
@@ -28,7 +28,7 @@ function displayTickerDetails(details) {
     }
   }
   
-  // Function to capitalize the first letter of a string
+
   function capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
   }

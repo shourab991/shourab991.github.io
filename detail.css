@@ -16,11 +16,11 @@ body {
 
 header {
   text-align: center;
-  color: #ffffff; /* White color */
-  background-color: #4c1e1e; /* Maroon background */
-  padding: 10px; /* Add padding for better visibility */
-  border-radius: 8px; /* Add border-radius for rounded corners */
-  font-size: 24px; /* Adjust the font size */
+  color: #ffffff; 
+  background-color: #4c1e1e; 
+  padding: 10px; 
+  border-radius: 8px; 
+  font-size: 24px; 
 }
 
 .search-bar {
@@ -40,7 +40,7 @@ header {
 
 .search-bar button {
   padding: 10px 20px;
-  background-color: #4CAF50; /* Green color */
+  background-color: #4CAF50; 
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -50,7 +50,7 @@ header {
 }
 
 .search-bar button:hover {
-  background-color: #45a049; /* Darker green color on hover */
+  background-color: #45a049; 
 }
 
 #stock-details {
@@ -59,15 +59,15 @@ header {
 
 .detail-item {
   margin-bottom: 10px;
-  background-color: #f0fff0; /* Light green background */
+  background-color: #f0fff0; 
   padding: 10px;
-  border: 1px solid #d4edda; /* Light green border */
+  border: 1px solid #d4edda; 
   border-radius: 5px;
 }
 
 .detail-item span {
   display: block;
-  color: #2c7a2c; /* Green color */
+  color: #2c7a2c; 
 }
 
 .detail-item span:first-child {
@@ -85,27 +85,27 @@ header {
 }
 
 .back-to-homepage a {
-  color: #ffffff; /* White color for the text */
-  background-color: #8b0000; /* Dark red background */
-  padding: 10px 20px; /* Add padding for better appearance */
-  border-radius: 4px; /* Add border-radius for rounded corners */
+  color: #ffffff; 
+  background-color: #8b0000; 
+  padding: 10px 20px; 
+  border-radius: 4px; 
   text-decoration: none;
   font-size: 16px;
 }
 
 .back-to-homepage a:hover {
-  background-color: #a52a2a; /* Darker red color on hover */
+  background-color: #a52a2a; 
 }
 
 .loading {
   text-align: center;
-  color: #888; /* Gray color */
+  color: #888; 
 }
 
 #toast {
   visibility: hidden;
   position: fixed;
-  top: 20px; /* Adjust the top position */
+  top: 20px; 
   right: 20px;
   transform: translateX(-50%);
   background-color: #333333;
@@ -128,13 +128,13 @@ header {
 /* Style for the home button */
 .home-button {
   display: block;
-  width: 30px; /* Adjust size as needed */
-  height: 30px; /* Adjust size as needed */
+  width: 30px; 
+  height: 30px; 
   background-color: maroon;
   position: absolute;
-  top: 10px; /* Adjust distance from top */
-  left: 10px; /* Adjust distance from left */
-  border-radius: 50%; /* Makes it round */
+  top: 10px; 
+  left: 10px; 
+  border-radius: 50%; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);}
 
 
@@ -150,8 +150,8 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -5px; /* Half of height */
-  margin-left: -5px; /* Half of width */
+  margin-top: -5px; 
+  margin-left: -5px; 
 }
 
 body {

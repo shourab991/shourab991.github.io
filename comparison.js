@@ -4,7 +4,7 @@ const month = String(today.getMonth() + 1).padStart(2, '0');
 const day = String(today.getDate()).padStart(2, '0');
 const formattedDate = `${year}-${month}-${day}`;
 
-// Set the maximum date for both date pickers to yesterday's date
+
 const maxDate = new Date(today);
 maxDate.setDate(today.getDate() - 1);
 const maxYear = maxDate.getFullYear();
@@ -25,7 +25,7 @@ async function fetchStockData(symbol, date) {
       const response = await fetch(url);
       const data = await response.json();
       if (data.results && data.results.length > 0) {
-          return data.results[0]; // Return the first (and only) result
+          return data.results[0]; 
       } else {
           return null;
       }
@@ -157,7 +157,7 @@ function displayComparison(stockSymbol1, stockData1, stockImageUrl1, stockSymbol
 function removeStock(symbol) {
     const stockElement = document.getElementById(`comparisonResults${symbol}`);
     if (stockElement) {
-        stockElement.remove(); // Remove the entire element from the DOM tree
+        stockElement.remove();
     }
   }
   
@@ -174,8 +174,8 @@ function displayError(message) {
         text: message,
         duration: 3000,
         close: true,
-        gravity: "top", // top or bottom
-        position: "right", // left, center, or right
+        gravity: "top", 
+        position: "right", 
         backgroundColor: "green",
     }).showToast();
 

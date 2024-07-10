@@ -180,7 +180,7 @@ main {
 }
 
 @media (min-width: 1025px) {
-  /* Add your styles for larger screens here */
+  
   .container {
     width: 1200px;
     margin: 0 auto;
