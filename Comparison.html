@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Comparison</title>
     <link rel="stylesheet" href="comparison.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
+
 <body>
+  <header>STOCK COMPARISON</header>
+
+    <a href="index.html" class="home-button"></a>
   <div class="container">
-    <h1 class="headerCompare">STOCK COMPARISON</h1>
     <a href="index.html">
       <button id="backToHomepageButton">Back to Homepage</button>
   </a>
@@ -17,11 +21,11 @@
     <main>
       <div id="searchArea">
         <label for="searchBox1">Enter Ticker Symbol 1:</label>
-        <input onkeypress="handleKeyPress(event)" type="text" placeholder="AAPL" id="searchBox1">
+        <input onkeypress="handleKeyPress(event)" autocomplete="off" type="text" placeholder="AAPL" id="searchBox1">
         <span id="errorSearchBox1" class="error-text"></span>
     
         <label for="searchBox2">Enter Ticker Symbol 2:</label>
-        <input onkeypress="handleKeyPress(event)" type="text" placeholder="GOOG" id="searchBox2">
+        <input onkeypress="handleKeyPress(event)" autocomplete="off" type="text" placeholder="GOOG" id="searchBox2">
         <span id="errorSearchBox2" class="error-text"></span>
     
         <label for="datePicker">Enter Date:</label>
@@ -31,7 +35,7 @@
         <button class="compareButton" onclick="compareStocks('searchBox1','searchBox2')">Compare</button>
     </div>
     <div id="additionalStockInput" style="display: none;">
-        <input type="text" placeholder="Stock Symbol" id="additionalStockSymbol">
+        <input type="text" placeholder="Stock Symbol" autocomplete="off" id="additionalStockSymbol">
         <span id="errorAdditionalStockSymbol" class="error-text"></span>
     
         <input type="date" id="additionalDate">

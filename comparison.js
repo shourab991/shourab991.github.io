@@ -37,7 +37,7 @@ async function fetchStockData(symbol, date) {
 
 function getStockImageUrl(symbol) {
   const stockInfo = tickerInfo.find(info => info.stockName === symbol);
-  return stockInfo ? stockInfo.imageUrl : 'default-image-url.png'; // Replace with a default image URL if not found
+  return stockInfo ? stockInfo.imageUrl : 'default.png'; //
 }
 
 async function addStockInput() {

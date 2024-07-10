@@ -13,12 +13,13 @@ body {
 }
 
 /* Header styling */
-.headerCompare {
-  text-align: center;
-  margin-bottom: 20px;
+header {
+  text-align: -webkit-center;
+  margin-bottom: 19px;
   color: #f8f3f3;
   background-color: #541616;
-  font-size: 20px;
+  font-size: 25px;
+  padding: 7px;
 }
 
 /* Search area styling */
@@ -167,4 +168,41 @@ button.compareButton:hover {
 
 #backToHomepageButton:hover {
   background-color: #d32f2f;
+}
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the home button */
+.home-button {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: maroon;
+  position: absolute;
+  top: 25px;
+  left: 330px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Style to make it look like a home icon */
+.home-button::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px; /* Half of height */
+  margin-left: -5px; /* Half of width */
 }
