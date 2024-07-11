@@ -80,7 +80,8 @@ async function addStockInput() {
       `;
 
       comparisonResultsElement.innerHTML = stockHTML;
-      document.body.appendChild(comparisonResultsElement);
+     const Bigbox = document.getElementById("Outerstockbox");
+       Bigbox.appendChild(comparisonResultsElement);
   } else {
       displayError('Failed to fetch stock data. Please try again later.', 'errorAdditionalStockSymbol');
   }
