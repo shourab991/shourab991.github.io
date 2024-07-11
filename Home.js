@@ -285,11 +285,29 @@ function handleKeyPress(event) {
 }
 const dateInput = document.getElementById('dateInput');
 dateInput.addEventListener('input', function(e){
-    const day = new Date(this.value).getUTCDay();
-    if([6, 0].includes(day)){
+    const selectedDate = new Date(this.value);
+    const today = new Date();
+    const day = selectedDate.getUTCDay();
+
+    // Check if the selected date is today
+    if (selectedDate.toDateString() === today.toDateString()) {
+        e.preventDefault();
+        this.value = '';
+        alert("Today's date is not allowed");
+    }
+
+    // Check if the selected date is a weekend
+    else if ([6, 0].includes(day)) {
         e.preventDefault();
         this.value = '';
         alert('Weekends not allowed');
+    }
+
+    // Check if the selected date is in the future
+    else if (selectedDate > today) {
+        e.preventDefault();
+        this.value = '';
+        alert('Future dates not allowed');
     }
 });
 
