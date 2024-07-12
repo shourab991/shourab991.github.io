@@ -63,13 +63,13 @@ button.compareButton:hover {
 
 
 .stock-container {
-  float: left; 
+  float: left;
   margin-left: 100px;
   display: flex;
   justify-content: center;
-  margin-top: 20px; 
+  margin-top: 20px;
+  column-gap: 90px;
 }
-
 .clearfix::after {
   content: "";
   display: table;
@@ -177,7 +177,7 @@ button.compareButton:hover {
   background-color: maroon;
   position: absolute;
   top: 25px;
-  left: 330px;
+  left: 28px;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

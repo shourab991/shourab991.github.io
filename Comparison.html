@@ -25,11 +25,11 @@
         <span id="errorSearchBox1" class="error-text"></span>
     
         <label for="searchBox2">Enter Ticker Symbol 2:</label>
-        <input onkeypress="handleKeyPress(event)" autocomplete="off" type="text" placeholder="GOOG" id="searchBox2">
+        <input onkeypress="handleKeyPress(event)" autocomplete="off" type="text" placeholder="GOOGL" id="searchBox2">
         <span id="errorSearchBox2" class="error-text"></span>
     
         <label for="datePicker">Enter Date:</label>
-        <input type="date" id="datePicker">
+        <input type="date" id="datePicker" placeholder="MM/DD/YYYY">
         <span id="errorDatePicker" class="error-text"></span>
     
         <button class="compareButton" onclick="compareStocks('searchBox1','searchBox2')">Compare</button>
@@ -38,15 +38,13 @@
         <input type="text" placeholder="Stock Symbol" autocomplete="off" id="additionalStockSymbol">
         <span id="errorAdditionalStockSymbol" class="error-text"></span>
     
-        <input type="date" id="additionalDate">
+        <input type="date" id="additionalDate" placeholder="MM/DD/YYYY">
         <span id="errorAdditionalDate" class="error-text"></span>
     
         <button id="addStockButton" onclick="addStockInput()">Add Stock</button>
     </div>
 <div class="Outerstockbox" id="Outerstockbox">
 
-  <div class="stock-container" id="comparisonResults1"></div>
-  <div class="stock-container" id="comparisonResults2"></div>
   <div id="toast" class="toast"></div>
 </div>
     

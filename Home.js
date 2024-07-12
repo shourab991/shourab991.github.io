@@ -208,12 +208,12 @@ async function fetchStockData(ticker, date) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error(`Error fetching data: ${response.statusText}`);
+            throw new Error(`Bandwith Limit reached: ${response.statusText}`);
         }
         const data = await response.json();
         return data;
     } catch (error) {
-        displayError(`Error fetching stock data: ${error.message}`);
+        displayError(`Please try again later. ${error.message}`);
         return null;
     }
 }
