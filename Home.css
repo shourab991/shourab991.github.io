@@ -17,8 +17,7 @@ input, textarea {
   background-color: #fff;
   font-size: 16px;
   max-width: 300px;
-  left: 33.6%;
-  transform: translateX(-50%);
+  /* left: 30.8%; */
   text-align: center;
   z-index: 10;
   top: 150px;
