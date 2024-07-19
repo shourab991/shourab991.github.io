@@ -188,6 +188,7 @@ window.onload = function() {
 };
 
 
+// Date input restrictions
 const today = new Date();
 const maxDate = new Date(today);
 maxDate.setDate(today.getDate() - 1);
@@ -196,7 +197,36 @@ const maxMonth = String(maxDate.getMonth() + 1).padStart(2, '0');
 const maxDay = String(maxDate.getDate()).padStart(2, '0');
 const maxFormattedDate = `${maxYear}-${maxMonth}-${maxDay}`;
 
-document.getElementById("dateInput").setAttribute('max', maxFormattedDate);
+const dateInput = document.getElementById("dateInput");
+dateInput.setAttribute('max', maxFormattedDate);
+
+dateInput.addEventListener('input', function(e) {
+    const selectedDate = new Date(this.value);
+    const today = new Date();
+    const day = selectedDate.getUTCDay();
+
+    // Check if the selected date is today
+    if (selectedDate.toDateString() === today.toDateString()) {
+        e.preventDefault();
+        this.value = '';
+        alert("Today's date is not allowed");
+    }
+
+    // Check if the selected date is a weekend
+    else if ([6, 0].includes(day)) {
+        e.preventDefault();
+        this.value = '';
+        alert('Weekends not allowed');
+    }
+
+    // Check if the selected date is in the future
+    else if (selectedDate > today) {
+        e.preventDefault();
+        this.value = '';
+        alert('Future dates not allowed');
+    }
+});
+
 
 
 
@@ -278,33 +308,7 @@ function handleKeyPress(event) {
         displayStockData();
     }
 }
-const dateInput = document.getElementById('dateInput');
-dateInput.addEventListener('input', function(e){
-    const selectedDate = new Date(this.value);
-    const today = new Date();
-    const day = selectedDate.getUTCDay();
 
-    // Check if the selected date is today
-    if (selectedDate.toDateString() === today.toDateString()) {
-        e.preventDefault();
-        this.value = '';
-        alert("Today's date is not allowed");
-    }
-
-    // Check if the selected date is a weekend
-    else if ([6, 0].includes(day)) {
-        e.preventDefault();
-        this.value = '';
-        alert('Weekends not allowed');
-    }
-
-    // Check if the selected date is in the future
-    else if (selectedDate > today) {
-        e.preventDefault();
-        this.value = '';
-        alert('Future dates not allowed');
-    }
-});
 
 function updateDateTime() {
     const now = new Date();
